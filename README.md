@@ -1,4 +1,4 @@
-# Bellabeat_project
+# Bellabeat project
 
 # About Bellabeat
 Bellabeat is a high-tech manufacturer of health-focused products for women was founded by Sandro Mur, Urška Sršen, and Lovepreet Singh in 2013. 
