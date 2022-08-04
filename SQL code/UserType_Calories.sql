@@ -10,27 +10,15 @@
 select ID, Tab_Temp.Calories1 as Calories,
 	case
 		when Tab_Temp.Very > AVG_comp.VeryActive
-			and Tab_Temp.Fairly < AVG_comp.FairlyActive
-			and Tab_Temp.Lightly < AVG_comp.LightlyActive
-			and Tab_Temp.Sedentary < AVG_comp.Sedentary
 			then 'Very'
 
 		when Tab_Temp.Fairly > AVG_comp.FairlyActive 
-			and Tab_Temp.Very < AVG_comp.VeryActive
-			and Tab_Temp.Lightly < AVG_comp.LightlyActive
-			and Tab_Temp.Sedentary < AVG_comp.Sedentary
 			then 'Fairly'
 			
 		when Tab_Temp.Lightly > AVG_comp.LightlyActive
-			and Tab_Temp.Very < AVG_comp.VeryActive
-			and Tab_Temp.Fairly < AVG_comp.FairlyActive
-			and Tab_Temp.Sedentary < AVG_comp.Sedentary
 			then 'Lightly'
 
 		when Tab_Temp.Sedentary > AVG_comp.Sedentary 
-			and Tab_Temp.Very < AVG_comp.VeryActive
-			and  Tab_Temp.Fairly < AVG_comp.FairlyActive
-			and Tab_Temp.Lightly < AVG_comp.LightlyActive
 			then 'Sendentary'
 		else 'Unknown'  
 		end as UserType
